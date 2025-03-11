@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolab Creative Coding Meetup</title>
+    <link rel="stylesheet" href="style.css">
+        <!-- Import libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/p5.asciify@0.7.4/dist/p5.asciify.umd.js"></script>
+ 
+</head>
+<body>
+<div class="content">
+<!--<h1 style="background-color: black;">Kolab Creative Coding meetup</h1>-->
+<div class="kolabTitle">    
+  <h1 id="kolab" style="background-color: black;">Kolab </h1>
+  <h1 id="creative"style="background-color: black;"> Creative </h1>
+  <h1 id="coding" style="background-color: black;"> Coding </h1>
+  <h1 id="meetup" style="background-color: black;"> Meetup</h1>
+  </div>
+<label class="container">
+  <input id="word1" class="checkmark" type="checkbox" checked="checked">
+  <input id="word2" class="checkmark" type="checkbox">
+  <input id="word3" class="checkmark" type="checkbox">
+  <input id="word4" class="checkmark" type="checkbox" checked="checked">
+</label>
+<header style="background-color: rgba(0, 0, 0, 0.3);  border-radius: 5px; padding:1%">
+<h2>We would like to get together and share our curiosities, concerns or excitement about art & code.</h2>
+
+<h3>For this is is that we want to:</h3>
+<ul>
+<li>Show & Tell: share your projects with us, show us your screen and code. We will have open speakers and open projector 🔊📺.</li>
+<li>Any language is welcome, also esoteric programming 🔮 and node base ones 🍝.</li>
+<li>Do you have no idea what this is? Are you curious or you are a nerd enthusiastic? Then you are also welcome! 🤖</li>
+<li>Connect with other artists and projects for future collabs. ☎️</li>
+<li>Share us sketches or WIP. 🎨</li>
+<li>Discuss philosophical and ethic aspects of programming, why not? 🙂‍↔️</li>
+</ul>
+</header>
+<marquee>
+<h2 id="upcoming" style="padding: 0.5%;">Upcoming meetup: 26.03.25 | 17:00 hr</h2>
+</marquee>
+<h2><a href="https://docs.google.com/forms/d/e/1FAIpQLSef5Weh5ksNbNoNYA4pQB7VJNnPMSlKsYUj_h7tDCjvmriu8A/viewform?usp=dialog" target="_blank">Sign up here</a></h2>
+
+<div class="image-container">
+<a href="https://www.koproduktionslabor.de/" target="_blank">
+    <img src="assets/Icon_White.png" style="width: 5%;
+  margin-left: -3%;
+    height: auto;">  
+  </a>
+</div>
+
+<p>Font Credits: Terminal Grotesque by Raphaël Bastide, with the contribution of Jérémy Landes. Distributed by velvetyne.fr.</p>
+</div>
+<script>
+   const firstCheckbox = document.querySelector("#word1");
+ const secondCheckbox = document.querySelector("#word2");
+ const thirdCheckbox = document.querySelector("#word3");
+ const fourthCheckbox = document.querySelector("#word4");  
+ const textVisibility1 = document.querySelector("#kolab");
+ const textVisibility2 = document.querySelector("#creative");
+ const textVisibility3 = document.querySelector("#coding");
+ const textVisibility4 = document.querySelector("#meetup");
+ textVisibility1.style.visibility = "visible";
+ textVisibility2.style.visibility = "hidden";
+ textVisibility3.style.visibility = "hidden";
+ textVisibility4.style.visibility = "visible";
+
+ firstCheckbox.addEventListener("change", () => {
+  if (firstCheckbox.checked) {
+    textVisibility1.style.visibility = "visible";
+    textVisibility1.value = "";
+    console.log("kolab");
+  } else {
+    textVisibility1.style.visibility = "hidden";
+  }
+});
+
+secondCheckbox.addEventListener("change", () => {
+  if (secondCheckbox.checked) {
+    textVisibility2.style.visibility = "visible";
+    textVisibility2.value = "";
+    console.log("creative");
+  } else {
+    textVisibility2.style.visibility = "hidden";
+  }
+});
+
+thirdCheckbox.addEventListener("change", () => {
+  if (thirdCheckbox.checked) {
+    textVisibility3.style.visibility = "visible";
+    textVisibility3.value = "";
+    console.log("coding");
+  } else {
+   
+    textVisibility3.style.visibility = "hidden";
+  }
+});
+
+fourthCheckbox.addEventListener("change", () => {
+  if (fourthCheckbox.checked) {
+    textVisibility4.style.visibility = "visible";
+    textVisibility4.value = "";
+    console.log("meetup");
+  } else {
+   
+    textVisibility4.style.visibility = "hidden";
+  }
+});
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
